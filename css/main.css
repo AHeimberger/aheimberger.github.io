@@ -63,6 +63,7 @@ body {
 .crow .crow-top {
   flex: 1;
   width: 100%;
+  height: auto;
 }
 
 .crow .crow-bottom {
@@ -127,6 +128,7 @@ body {
 
 .crow-preview {
   width: 100%;
+  height: 100%;
   flex: 1;
 }
 .crow-default .crow-left .crow-intro {
@@ -182,6 +184,7 @@ body {
 }
 
 .crow-preview .image {
+  display: block;
   width: 100%;
   height: 100%;
   background-position: center;
