@@ -126,13 +126,19 @@ body {
 
 /* ---------------------------------------------------------------------------------------- */
 
-.crow-preview {
+.crow-top .crow-preview {
   width: 100%;
   height: 100%;
-  flex: 1;
+  background-color: #ff00ff;
 }
-.crow-default .crow-left .crow-intro {
+.crow-left .crow-preview {
   width: 100%;
+  flex: 1;
+  background-color: #ff00ff;
+}
+.crow-intro {
+  width: 100%;
+  max-height: 300px;
   text-align: center;
   padding-top: 15px;
 }
@@ -146,10 +152,6 @@ body {
   border-bottom: 1px solid rgba(59, 58, 52, 0.7);
 }
 
-
-.crow-intro {
-  max-height: 300px;
-}
 .crow-intro .tagline {
   font-weight: 400;
   text-transform: uppercase;
@@ -219,9 +221,6 @@ body {
     height: 400px;
   }
 }
-
-/* ---------------------------------------------------------------------------------------- */
-
 
 .crow-main {
   flex-direction: row;
