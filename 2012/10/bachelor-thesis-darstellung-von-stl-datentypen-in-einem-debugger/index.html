@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+<title>Bachelor Thesis: Darstellung von STL-Datentypen in einem Debugger - AHeimberger</title>
+<meta name="author" content="Andreas Heimberger" />
+<meta name="description" content="Personal website for memories of more or less wonderful happenings" />
+<meta name="robots" content="index, follow" />
+<meta name="referrer" content="always" />
+
+
+<meta property="og:title" content="Bachelor Thesis: Darstellung von STL-Datentypen in einem Debugger - AHeimberger" />
+<meta property="og:description" content="Personal website for memories of more or less wonderful happenings" />
+<meta property="og:url" content="https://aheimberger.github.io" />
+
+
+
+
+<link rel="icon" href="https://aheimberger.github.io/assets/favicon.png" />
+
+
+<link rel="stylesheet" href="https://aheimberger.github.io/css/main.css" type="text/css" media="screen" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+  crossorigin=""></script>
+
+
+
+
+
+
+<script src="https://aheimberger.github.io/viewport.js"></script></head>
+
+<body>
+
+    <div class="crow">
+        <div class="crow-left">
+			<div class="crow-intro">
+    <img height="150" width="150" src="https://aheimberger.github.io/profile.png" />
+    <br/>
+
+    <span class="tagline">engineer . tinkerer . father</span>
+    <h1>Andreas Heimberger</h1>
+    
+
+	
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+	
+
+	<a href="https://aheimberger.github.io/2012/10/bachelors-degree-hardware-software-engineering/ " class=" previous" accesskey="j">&lt;&lt;&lt;</a>
+	<span class="blobline">30/10/2012</span>
+	<a href="https://aheimberger.github.io/2013/04/student-project-hgbrb/ " class=" next" accesskey="l">>>></a>
+
+
+</div>
+
+            <div class="crow-page-nav">
+                <ul>
+	<li><div class="toggle"></div></li>
+
+	
+	<li><a href="https://aheimberger.github.io/." target="_self"><img height="15" width="15"
+				src="https://aheimberger.github.io/icons/home.svg" accesskey="k" /></a></li>
+	
+
+	
+
+	
+	<li><a href="https://github.com/aheimberger" target="_blank"><img height="15" width="15"
+				src="https://aheimberger.github.io/icons/github.svg" /></a></li>
+	
+
+	
+
+	
+	<li><a href="https://www.instagram.com/aheimtal/" target="_blank"><img height="15" width="15"
+				src="https://aheimberger.github.io/icons/instagram.svg" /></a></li>
+	
+
+	
+
+	
+
+	
+	<li><a href="https://www.xing.com/profile/Andreas_Heimberger4"><img height="15" width="15"
+				src="https://aheimberger.github.io/icons/xing.svg" /></a></li>
+	
+
+	
+	<li><a href="https://linkedin.com/in/andreas-heimberger-6a0187200"><img height="15" width="15" src="https://aheimberger.github.io/icons/linkedin.svg" /></a></li>
+	
+
+</ul>
+
+<script type="text/javascript">
+	const body = document.querySelector("body"),
+	toggle = document.querySelector(".toggle");
+	let getMode = localStorage.getItem("mode");
+	
+	if (getMode && getMode === "theme_two") {
+		body.classList.toggle("theme_two");
+		toggle.classList.toggle("active")
+	}
+
+	toggle.addEventListener("click", ()=> {
+		body.classList.toggle("theme_two");
+
+		if (!body.classList.contains("theme_two")) {
+			return localStorage.setItem("mode", "");
+		}
+		
+		return localStorage.setItem("mode", "theme_two");
+	});
+
+	toggle.addEventListener("click", () => toggle.classList.toggle("active"));
+</script>
+            </div>
+
+            <div class="crow-tribute">
+                <div class="crow-credit">
+	Built with <a href="https://gohugo.io/">Hugo</a>
+</div>
+            </div>
+        </div>
+
+        <div class="crow-right">
+            <div class="crow-content">
+				<h1>Bachelor Thesis: Darstellung von STL-Datentypen in einem Debugger</h1>
+                <p>cat: university</span></p>
+                <p>My bachelor thesis was about the representation of the C++ Standard Template Library within the debugger <a href="https://github.com/rainerf/ricodebug">Ricodebug</a>. Ricodebug was a students project and used the GNU Debugger (GDB). Within the thesis I showed different methods, to represent the content of the C++ data structure in a human readable way. Furthermore, I investigated Visual Studio 2010 (autoexp.dat), Visual Studio 2013 (.natvis) and Qt (bridge.py, dumper.py, qttypes.py).</p>
+
+<p>The following text output is from the debugger GDB and shows why this work was of interest. Without Pretty-Printer it is not possible to get information about the content within the data structure.</p>
+
+<p>Without Pretty-Printer : Overview about class structure of the object.</p>
+
+<pre><code>(gdb) print vec
+$2 = {&lt;std::_Vector_base&lt;int, std::allocator&lt;int&gt; &gt;&gt; = {_M_impl = {
+&lt;std::allocator&lt;int&gt;&gt; = {&lt;__gnu_cxx::new_allocator&lt;int&gt;&gt; = {&lt;No data fields&gt;},
+&lt;No data fields&gt;}, _M_start = 0x604050, _M_finish = 0x604064,
+_M_end_of_storage = 0x604070}}, &lt;No data fields&gt;}
+</code></pre>
+
+<p>With Pretty-Printer : Shows values stored within the object.</p>
+
+<pre><code>(gdb) print vec
+^done,value=&quot;std::vector of length 5, capacity 8 = {10, 5, 1, -5, -10}&quot;
+</code></pre>
+
+<p>Furthermore, I presented different solutions within the thesis for debugging classes, which were:</p>
+
+<ul>
+<li>Code Injection: Adding additional print functions to a code via shared libraries.</li>
+<li>Front-End interprets data structure</li>
+<li>Debugger overwrites output-stream: GDB Pretty-Printer</li>
+</ul>
+
+<p>At the end of the thesis I came to the conclusion, that python pretty-printers are the best solution for my thesis, because they would work in every visual front-end which uses GDB and furthermore, an existing solution existed to represented the Standard Template Library.</p>
+
+<p>At the end of my thesis I made a proof of concept. I included python pretty-printers within Ricodebug.</p>
+
+<p><strong>Ressources:</strong></p>
+
+<ul>
+<li><a href="http://www.gnu.org/software/gdb/">The GNU Project Debugger</a></li>
+<li><a href="https://github.com/rainerf/ricodebug">Ricodebug</a></li>
+<li><a href="https://sourceware.org/gdb/wiki/STLSupport">STL Support Tools</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="crow-footer">
+        Built with <a href="https://gohugo.io/">Hugo</a>
+    </div>
+</body>
+
+</html>
