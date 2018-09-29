@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+<title>Hengst - AHeimberger</title>
+<meta name="author" content="Andreas Heimberger" />
+<meta name="description" content="Personal website for memories of more or less wonderful happenings" />
+<meta name="robots" content="index, follow" />
+<meta name="referrer" content="always" />
+
+
+<meta property="og:title" content="Hengst - AHeimberger" />
+<meta property="og:description" content="Personal website for memories of more or less wonderful happenings" />
+<meta property="og:url" content="aheimberger.github.io" />
+
+
+
+
+<link rel="icon" href="aheimberger.github.io/assets/favicon.png" />
+
+
+<link rel="stylesheet" href="aheimberger.github.io/css/split.css" type="text/css" media="screen" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+  integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+  crossorigin=""></script>
+
+
+
+
+</head>
+
+<body>
+
+	<div class="crow-default">
+		<div class="crow-left">     
+			<div class="crow-preview">
+				<div id="map"></div>
+
+<script type="text/javascript">
+
+function loadGPXFileMap(map, filename) {
+		$.ajax({
+				url: filename,
+				dataType: "xml",
+				success: function(data) {
+						var latlon = [];
+
+						var trkpt = data.documentElement.getElementsByTagName("trkpt");
+						for(var i = 0; i < trkpt.length; i++) {
+								var lat = parseFloat(trkpt[i].getAttribute("lat"));
+								var lon = parseFloat(trkpt[i].getAttribute("lon"));
+								var item = [ lat, lon ];
+								latlon.push(item)
+						}
+
+						var polyline = L.polyline(latlon, { color: 'red' }).addTo(map);
+						map.fitBounds(polyline.getBounds());
+				}
+		});
+}
+
+$(document).ready(function() {
+		var map = L.map( 'map', {
+				 zoomControl: false,
+				 scrollWheelZoom: true,
+				 doubleClickZoom: false,
+				 touchZoom: false,
+				 dragging: true
+		});
+
+		L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: ['a','b','c']
+		}).addTo(map);
+
+		loadGPXFileMap(map, "trail.gpx");
+});
+
+lightbox.option({
+		'alwaysShowNavOnTouchDevices': true,
+		'wrapAround': true
+})
+
+</script>
+			</div>
+
+			<div class="crow-intro">
+					
+<h1>Hengst</h1>
+
+					
+
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+		
+	
+		
+	
+	
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+
+	<a href="aheimberger.github.io/2018/03/eggenmandli/ " class=" previous">&lt;&lt;&lt;&lt;&lt;&lt;</a>
+	<span class="blobline">Monday, Apr 2, 2018</span>
+	<a href="" class="disabled  next">>>>>>>>></a>
+
+
+			</div>
+			
+			<div class="crow-page-nav">
+				
+<ul>
+	
+		<li><a href="//127.0.0.1:1313" target="_self"><img height="15" width="15" src="aheimberger.github.io/icons/home.svg" /></a></li>
+	
+
+	
+		<li><a href="//127.0.0.1:1313/page/archive/" target="_self"><img height="15" width="15" src="aheimberger.github.io/icons/archive.svg" /></a></li>
+	
+
+	
+		<li><a href="https://github.com///gihub.com/aheimberger" target="_blank"><img height="15" width="15" src="aheimberger.github.io/icons/github.svg" /></a></li>
+	
+
+	
+
+	 
+
+	
+
+	
+
+	
+		<li><a href="https://www.xing.com/profile///gihub.com/aheimberger"><img height="15" width="15" src="aheimberger.github.io/icons/xing.svg" /></a></li>
+	
+</ul>
+
+			</div>
+		</div>
+
+		<div class="crow-right">
+			
+				<div class="crow-main">
+	
+
+
+
+	
+	
+
+	
+		<img src="gallery/0004.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0020.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0023.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0025.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0028.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0033.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0052.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0056.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0057.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0060.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0062.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0063.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0064.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0067.JPG" style="width: 100%;" />
+	
+
+	
+	
+
+	
+		<img src="gallery/0070.JPG" style="width: 100%;" />
+	
+
+
+
+</div>
+
+			
+
+			<div class="crow-footer">
+				
+					 <div class="crow-credit">
+	<p>&copy;2018 Andreas Heimberger</p>
+</div>
+
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
