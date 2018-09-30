@@ -55,13 +55,12 @@
 
 <script type="text/javascript">
 
-function loadGPXFileMap(map, filename) {
+function loadGPXFileMap(map, filename, trailColor) {
 		$.ajax({
 				url: filename,
 				dataType: "xml",
 				success: function(data) {
 						var latlon = [];
-
 						var trkpt = data.documentElement.getElementsByTagName("trkpt");
 						for(var i = 0; i < trkpt.length; i++) {
 								var lat = parseFloat(trkpt[i].getAttribute("lat"));
@@ -70,7 +69,7 @@ function loadGPXFileMap(map, filename) {
 								latlon.push(item)
 						}
 
-						var polyline = L.polyline(latlon, { color: 'red' }).addTo(map);
+						var polyline = L.polyline(latlon, { color: trailColor }).addTo(map);
 						map.fitBounds(polyline.getBounds());
 				}
 		});
@@ -78,8 +77,8 @@ function loadGPXFileMap(map, filename) {
 
 $(document).ready(function() {
 		var map = L.map( 'map', {
-				 zoomControl: false,
-				 scrollWheelZoom: true,
+				 zoomControl: true,
+				 scrollWheelZoom: false,
 				 doubleClickZoom: false,
 				 touchZoom: false,
 				 dragging: true
@@ -90,13 +89,8 @@ $(document).ready(function() {
 			subdomains: ['a','b','c']
 		}).addTo(map);
 
-		loadGPXFileMap(map, "trail.gpx");
+		loadGPXFileMap(map, "trail.gpx", "red");
 });
-
-lightbox.option({
-		'alwaysShowNavOnTouchDevices': true,
-		'wrapAround': true
-})
 
 </script>
 			</div>
@@ -191,8 +185,78 @@ lightbox.option({
 		
 	
 		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
 	
 	
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
+			  
+			
 		
 	
 		
@@ -328,6 +392,15 @@ lightbox.option({
 </ul>
 
 			</div>
+
+			<div class="crow-footer">
+				
+					 <div class="crow-credit">
+	<p>&copy;2018 Andreas Heimberger</p>
+</div>
+
+				
+			</div>
 		</div>
 
 		<div class="crow-right">
@@ -433,15 +506,6 @@ lightbox.option({
 </div>
 
 			
-
-			<div class="crow-footer">
-				
-					 <div class="crow-credit">
-	<p>&copy;2018 Andreas Heimberger</p>
-</div>
-
-				
-			</div>
 		</div>
 	</div>
 

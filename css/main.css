@@ -129,12 +129,12 @@ body {
 .crow-top .crow-preview {
   width: 100%;
   height: 100%;
-  background-color: #ff00ff;
+  background-color: #969484;
 }
 .crow-left .crow-preview {
   width: 100%;
   flex: 1;
-  background-color: #ff00ff;
+  background-color: #969484;
 }
 .crow-intro {
   width: 100%;
@@ -174,6 +174,8 @@ body {
 }
 .crow-intro .disabled {
   opacity: 0;
+  cursor: default;
+  pointer-events: none;
 }
 
 .crow-page-nav ul {
