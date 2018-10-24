@@ -5,14 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 
-<title>Buochserhorn - AHeimberger</title>
+<title>Fürenwand - AHeimberger</title>
 <meta name="author" content="Andreas Heimberger" />
 <meta name="description" content="Personal website for memories of more or less wonderful happenings" />
 <meta name="robots" content="index, follow" />
 <meta name="referrer" content="always" />
 
 
-<meta property="og:title" content="Buochserhorn - AHeimberger" />
+<meta property="og:title" content="Fürenwand - AHeimberger" />
 <meta property="og:description" content="Personal website for memories of more or less wonderful happenings" />
 <meta property="og:url" content="https://aheimberger.github.io" />
 
@@ -51,53 +51,18 @@
 	<div class="crow-default">
 		<div class="crow-left">     
 			<div class="crow-preview">
-				<div id="map"></div>
+				
+					
+					<div class="image" style="background-image: url('https://aheimberger.github.io/2018/09/f%C3%BCrenwand/preview.jpg');">
+	
+</div>
 
-<script type="text/javascript">
-
-function loadGPXFileMap(map, filename, trailColor) {
-		$.ajax({
-				url: filename,
-				dataType: "xml",
-				success: function(data) {
-						var latlon = [];
-						var trkpt = data.documentElement.getElementsByTagName("trkpt");
-						for(var i = 0; i < trkpt.length; i++) {
-								var lat = parseFloat(trkpt[i].getAttribute("lat"));
-								var lon = parseFloat(trkpt[i].getAttribute("lon"));
-								var item = [ lat, lon ];
-								latlon.push(item)
-						}
-
-						var polyline = L.polyline(latlon, { color: trailColor }).addTo(map);
-						map.fitBounds(polyline.getBounds());
-				}
-		});
-}
-
-$(document).ready(function() {
-		var map = L.map( 'map', {
-				 zoomControl: true,
-				 scrollWheelZoom: false,
-				 doubleClickZoom: false,
-				 touchZoom: false,
-				 dragging: true
-		});
-
-		L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-			subdomains: ['a','b','c']
-		}).addTo(map);
-
-		loadGPXFileMap(map, "trail.gpx", "red");
-});
-
-</script>
+				
 			</div>
 
 			<div class="crow-intro">
 					
-<h1>Buochserhorn</h1>
+<h1>Fürenwand</h1>
 
 					
 
@@ -142,95 +107,6 @@ $(document).ready(function() {
 	
 		
 			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-	
-	
-		
-	
-		
-			
 			  
 			
 		
@@ -333,6 +209,33 @@ $(document).ready(function() {
 	
 		
 			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+	
+	
+		
+	
+		
+			
+			  
+			
+		
+	
+		
+			
 			  
 			
 		
@@ -345,7 +248,69 @@ $(document).ready(function() {
 	
 		
 			
-			  
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
 			
 		
 	
@@ -386,9 +351,9 @@ $(document).ready(function() {
 		
 	
 
-	<a href="https://aheimberger.github.io/2017/05/grosser-mythen/ " class=" previous">&lt;&lt;&lt;&lt;&lt;&lt;</a>
-	<span class="blobline">Saturday, May 27, 2017</span>
-	<a href="https://aheimberger.github.io/2017/06/niederbauen/ " class=" next">>>>>>>>></a>
+	<a href="https://aheimberger.github.io/2018/08/bishorn/ " class=" previous">&lt;&lt;&lt;&lt;&lt;&lt;</a>
+	<span class="blobline">Saturday, Sep 8, 2018</span>
+	<a href="https://aheimberger.github.io/2018/09/melchsee-frutt/ " class=" next">>>>>>>>></a>
 
 
 			</div>
@@ -434,8 +399,7 @@ $(document).ready(function() {
 		</div>
 
 		<div class="crow-right">
-			
-				<div class="crow-main">
+			<div class="crow-main">
 	
 
 
@@ -444,98 +408,34 @@ $(document).ready(function() {
 	
 
 	
-		<img src="gallery/IMG_2190.JPG" style="width: 100%;" />
+		<img src="gallery/IMG_0324.JPG" style="width: 100%;" />
 	
 
 	
 	
 
 	
-		<img src="gallery/IMG_2191.JPG" style="width: 100%;" />
+		<img src="gallery/IMG_0364.JPG" style="width: 100%;" />
 	
 
 	
 	
 
 	
-		<img src="gallery/IMG_2203.JPG" style="width: 100%;" />
+		<img src="gallery/IMG_0381.JPG" style="width: 100%;" />
 	
 
 	
 	
 
 	
-		<img src="gallery/IMG_2204.JPG" style="width: 100%;" />
-	
-
-	
-	
-
-	
-		<img src="gallery/IMG_2205.JPG" style="width: 100%;" />
-	
-
-	
-	
-
-	
-		<img src="gallery/IMG_2274.JPG" style="width: 100%;" />
-	
-
-	
-	
-
-	
-		<img src="gallery/IMG_2275.JPG" style="width: 100%;" />
-	
-
-	
-	
-
-	
-		<img src="gallery/IMG_2291.JPG" style="width: 100%;" />
-	
-
-	
-	
-
-	
-		<img src="gallery/IMG_2309.JPG" style="width: 100%;" />
-	
-
-	
-	
-
-	
-		<img src="gallery/IMG_2310.JPG" style="width: 100%;" />
-	
-
-	
-	
-
-	
-		<img src="gallery/IMG_2313.JPG" style="width: 100%;" />
-	
-
-	
-	
-
-	
-		<img src="gallery/IMG_2356.JPG" style="width: 100%;" />
-	
-
-	
-	
-
-	
-		<img src="gallery/IMG_2366.JPG" style="width: 100%;" />
+		<img src="gallery/IMG_0396.JPG" style="width: 100%;" />
 	
 
 
 
 </div>
 
-			
 		</div>
 	</div>
 
