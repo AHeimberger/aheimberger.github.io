@@ -1,9 +1,8 @@
 /*
   color: #FFFFFF
-  color: #cab748
   color: #282828
   color: #969484 rgb(59, 58, 52)
-  color: #c7a947
+  color: #EEEEEE
   color: #CCCCCC
 */
 
@@ -16,10 +15,11 @@
 
 body {
   font-family: "Open Sans";
-  background-color: #282828;
+  background-color: #292a2d;
   color: #969484;
   border-style: none;
   line-height: 1;
+  overflow-x: hidden;
 }
 
 a {
@@ -30,13 +30,13 @@ a {
   color: #969484;
 }
 a:hover {
-  color: #cab748;
+  color: #EEEEEE;
 }
 hr {
     display: block;
     height: 1px;
     border: 0;
-    border-bottom: 1px solid rgba(59, 58, 52, .7);
+    border-bottom: 1px solid rgba(59, 58, 52, 0.7);
     margin: 1em 0;
     padding: 0;
 }
@@ -60,8 +60,8 @@ body {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #c7a947;
-  outline: 1px solid: #cab748;
+  background-color: #EEEEEE;
+  outline: 1px solid: #EEEEEE;
 }
 
 /* ---------------------------------------------------------------------------------------- */
@@ -71,12 +71,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .crow .crow-top {
-  flex: 1;
   overflow: auto;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  flex-grow: 1;
 }
-
 .crow .crow-bottom {
   border-top: 1px solid rgba(59, 58, 52, 0.7);
   width: 100%;
@@ -88,64 +89,38 @@ body {
 .crow .crow-bottom .crow-intro h1 {
   font-size: 60px;
   line-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 
 /* ---------------------------------------------------------------------------------------- */
 
-.crow-default {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-}
 .crow-left {
-  width: 50%;
-  height: 100vh;
+  height: 100%;
+  width: 49.9%;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  float: left;
+  display: block;
 }
 .crow-right {
-  width: 50%;
-  height: 100vh;
+  height: 100%;
+  width: 49.9%;
   overflow: auto;
-  display: flex;
-  flex-direction: column;
-  border-left: 1px solid rgba(59, 58, 52, .7);
-}
-.crow-right .crow-main {
-  flex-grow: 1;
-}
-@media (max-width: 800px) {
-  .crow-default {
-    height: auto;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; 
-  }
-  .crow-left {
-    width: 100%;
-    height: auto;
-  }
-  .crow-right {
-    width: 100%;
-    height: auto;
-  }
-  .crow-right .crow-main {
-    flex-grow: 0;
-  }
+  border-left: 1px solid rgba(59, 58, 52, 0.7);
+  float: right;
 }
 
 /* ---------------------------------------------------------------------------------------- */
 
-.crow-top .crow-preview {
+.crow-preview {
   width: 100%;
   height: 100%;
-  background-color: #969484;
-}
-.crow-left .crow-preview {
-  width: 100%;
-  flex: 1;
-  background-color: #969484;
+  display: block;
+  background-color: #EEEEEE;
 }
 .crow-intro {
   width: 100%;
@@ -168,7 +143,7 @@ body {
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.5px;
-  color: #c7a947;
+  color: #EEEEEE;
 }
 .crow-intro h1 {
   font-weight: 600;
@@ -181,7 +156,7 @@ body {
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 0.5px;
-  color: #c7a947;
+  color: #EEEEEE;
 }
 .crow-intro .disabled {
   opacity: 0;
@@ -198,100 +173,125 @@ body {
   margin-right: 15px;
 }
 
-.crow-preview .image {
+.image {
   display: block;
   width: 100%;
   height: 100%;
   background-position: center;
   background-size: cover;
 }
-.crow-preview  .video-wrap {
+.crow-left .video-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.crow-preview .video {
+.crow-left .video {
   object-fit: cover;
   object-position: 50% 50%;
   width: 100%;
   height: 100%;
 }
-.crow-preview  #map {
+.crow-left #map {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
 }
-@media (max-width: 800px) {
-  .crow-left .crow-preview .image {
-    height: 400px;
-  }
-  .crow-left .crow-preview .video-wrap {
-    height: 400px;
-  }
-  .crow-left .crow-preview #map {
-    height: 400px;
-  }
-}
 
-.crow-main {
-  flex-direction: row;
-  margin-bottom: 10px;
-  text-align: center;
+.crow-text {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px;
 }
-.crow-main p {
-  padding: 10px;
+.crow-text h1 {
+  font-size: 30px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  color: #CCCCCC;
+}
+.crow-text p {
   text-align: left;
 }
-.crow-main .highlight {
+.crow-text .highlight {
   padding: 10px;
 }
-.crow-main pre {
+.crow-text pre {
   width: 100%;
   line-height: 1.5em;
   text-align: left;
 }
-.crow-main iframe {
+.crow-text iframe {
   width: 95%;
 }
-.crow-main ul, 
-.crow-main ol,
-.crow-main dl {
+.crow-text ul, 
+.crow-text ol,
+.crow-text dl {
   margin-left: 2em;
 }
-.crow-main img {
+.crow-text img {
   width: 100%;
   float: left;
-  margin-bottom: 1px;
+  margin-bottom: 10px;
 }
-.crow-main a {
+.crow-text a {
   border-bottom: 1px dotted;
 }
-.crow-main ul {
+.crow-text ul {
   text-align: left;
 }
 
-.crow-archive ul {
+.crow-right img {
   width: 100%;
+  float: left;
+}
+
+.crow-archive ul {
   list-style-type: none;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .crow-archive li {
   border-bottom: 1px solid rgba(59, 58, 52, 0.7);
+  border-right: 1px solid rgba(59, 58, 52, 0.7);
+  padding: 10px;
+  flex-basis: auto;
+  flex-grow: 1;
+  text-align: left;
+}
+.crow-archive li:hover {
+  background-color: rgba(55, 55, 55, 55);
 }
 .crow-archive li a {
+  font-size: 20px;
+  padding: 20px;
   display: block;
-  padding: 10px;
   -webkit-transition: background-color 200ms ease-in;
   -moz-transition: background-color 200ms ease-in;
   -o-transition: background-color 200ms ease-in;
   transition: background-color 200ms ease-in;
+  white-space: wrap;
+  max-width: 400px;
 }
-.crow-archive li a:hover {
-  background-color: rgba(55, 55, 55, 55);
-  font-size: 20px;
-  transition: font-size 150ms;
+.crow-archive li a time {
+  color: #EEEEEE;
+  font-size: 15px;
+}
+.crow-archive li {
+  background-color: rgba(20, 20, 20, 0.1);
+}
+.crow-archive .map {
+  background-color: rgba(20, 20, 20, 0.3);
+}
+.crow-archive .single {
+  background-color: rgba(20, 20, 20, 0.5);
+}
+.crow-archive .text {
+  background-color: rgba(20, 20, 20, 0.7);
+}
+.crow-archive .video {
+  background-color: rgba(20, 20, 20, 0.9);
 }
 
 .crow-footer {
@@ -299,8 +299,7 @@ body {
   width: 100%;
   bottom: 0;
   padding-top: 20px;
-  border-top: 1px solid rgba(59, 58, 52, 0.7);
-  background-color: #282828;
+  background-color: rgba(59, 58, 52, 0.7);
   text-align: center;
 }
 
@@ -315,7 +314,7 @@ body {
   display: block;
 }
 .crow-links .crow-link ul li:first-child {
-  color: #c7a947;
+  color: #EEEEEE;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 20px;
