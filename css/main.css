@@ -75,6 +75,7 @@ body {
   overflow: auto;
   width: 100%;
   height: auto;
+  display: flex;
   flex-direction: row;
   flex-grow: 1;
 }
@@ -101,18 +102,30 @@ body {
 
 .crow-left {
   height: 100%;
-  width: 49.9%;
+  width: 50%;
   overflow: hidden;
-  float: left;
-  display: block;
 }
 .crow-right {
   height: 100%;
-  width: 49.9%;
+  width: 50%;
   overflow: auto;
   border-left: 1px solid rgba(59, 58, 52, 0.7);
-  float: right;
 }
+
+@media (max-width: 800px) {
+  .crow .crow-top {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; 
+  }
+  .crow-left {
+    width: 100%;
+    height: 100%;
+  }
+  .crow-right {
+    width: 100%;
+    height: auto;
+  }
+ }
 
 /* ---------------------------------------------------------------------------------------- */
 
