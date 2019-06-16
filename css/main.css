@@ -139,12 +139,10 @@ body {
 }
 .crow-page-nav {
   width: 100%;
-  font-family: "simple-line-icons";
   display: flex;
   justify-content:center;
   align-content:center;
   flex-direction: row;
-  border-bottom: 1px solid rgba(59, 58, 52, 0.7);
 }
 
 .crow-intro .tagline {
@@ -277,16 +275,15 @@ body {
   text-align: left;
 }
 .crow-archive li:hover {
+  -webkit-transition: background-color 1s, box-shadow 250ms; /* Safari prior 6.1 */
+  transition: background-color 1s, box-shadow 250ms;
   background-color: rgba(55, 55, 55, 55);
+  box-shadow: inset 0 -5px 0 #ffffff;
 }
 .crow-archive li a {
   font-size: 20px;
   padding: 20px;
   display: block;
-  -webkit-transition: background-color 200ms ease-in;
-  -moz-transition: background-color 200ms ease-in;
-  -o-transition: background-color 200ms ease-in;
-  transition: background-color 200ms ease-in;
   white-space: wrap;
   max-width: 400px;
 }
@@ -298,9 +295,6 @@ body {
 .crow-archive li a time {
   color: #EEEEEE;
   font-size: 15px;
-}
-.crow-archive li {
-  background-color: rgba(20, 20, 20, 0.1);
 }
 .crow-archive .map {
   background-color: rgba(20, 20, 20, 0.3);
