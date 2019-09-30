@@ -46,7 +46,21 @@
 <link rel="alternate" type="application/rss+xml" href="https://aheimberger.github.io/index.xml" title="AHeimberger" />
 
 
-</head>
+
+
+<script type="text/javascript">
+  
+  let vh = window.innerHeight * 0.01;
+  
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  
+  window.addEventListener('resize', () => {
+    
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
+</script></head>
 
 <body>
 
