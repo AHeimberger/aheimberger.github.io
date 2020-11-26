@@ -6,9 +6,10 @@ $(document).ready(function () {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
 
-    setViewPortHeight();
+    $(window).on('resize', _.debounce(function () {
+        console.debug("hello world");
+        setViewPortHeight();
+    }, 400));
 
-    // $(window).on('resize', _.debounce(function () {
-    //     setViewPortHeight();
-    // }, 400));
+    setViewPortHeight();
 });
