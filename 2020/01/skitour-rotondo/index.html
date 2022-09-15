@@ -54,7 +54,7 @@
 	<div class="crow">
 		<div class="crow-left">
 			<div class="crow-intro">
-    <img height="150" width="150" src="https://aheimberger.github.io/profile.png" />
+    <img class="profile" height="150" width="150" src="https://aheimberger.github.io/profile.png" />
     <br/>
 
     <span class="tagline">engineer . tinkerer . father</span>
@@ -575,28 +575,8 @@
 
 </ul>
 
-<script type="text/javascript">
-	const body = document.querySelector("body"),
-	toggle = document.querySelector(".toggle");
-	let getMode = localStorage.getItem("mode");
-	
-	if (getMode && getMode === "theme_two") {
-		body.classList.toggle("theme_two");
-		toggle.classList.toggle("active")
-	}
+<script src="https://aheimberger.github.io/theme.js"></script>
 
-	toggle.addEventListener("click", ()=> {
-		body.classList.toggle("theme_two");
-
-		if (!body.classList.contains("theme_two")) {
-			return localStorage.setItem("mode", "");
-		}
-		
-		return localStorage.setItem("mode", "theme_two");
-	});
-
-	toggle.addEventListener("click", () => toggle.classList.toggle("active"));
-</script>
 			</div>
 
             <div class="crow-tribute">

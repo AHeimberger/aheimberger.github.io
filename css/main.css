@@ -109,7 +109,17 @@ body {
   .crow-tribute {
     display: none;
   }
- }
+}
+@media (max-width: 500px) {
+ .profile {
+    visibility: hidden;
+  }
+  .crow-intro {
+    background-image: url(/profile_2.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
 
 /* ---------------------------------------------------------------------------------------- */
 
