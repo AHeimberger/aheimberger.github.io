@@ -189,7 +189,7 @@ body {
 .crow-right .preview-image {
   display: block;
   width: calc(100% - 10px);
-  height: 400px;
+  height: 600px;
   background-position: center;
   background-size: cover;
 }
@@ -412,4 +412,17 @@ body.theme_two h1 {
 .toggle.active::before {
   background-color: #061b4a;
   left: calc(100% - 10px - 2px);
+}
+
+.crow-content * a {
+  background-color: #FEC45E;
+  color: #000;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+.crow-content * a:hover {
+  background-color: #289DAA;
 }
