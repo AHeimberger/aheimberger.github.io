@@ -33,6 +33,7 @@
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
 
+/* definition of colors for color toggling */
 :root {
   --font-color: #969484;
   --font-highlight-color: #eeeeee;
@@ -51,7 +52,7 @@
 }
 
 body {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   color: var(--font-color);
   background-color: var(--bg-color);
   border-style: none;
