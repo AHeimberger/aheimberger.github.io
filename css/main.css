@@ -2,40 +2,11 @@
 
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
-/* open-sans-300 - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local(''),
-       url('../fonts/open-sans-v34-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/open-sans-v34-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* open-sans-regular - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-       url('../fonts/open-sans-v34-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/open-sans-v34-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* open-sans-700 - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local(''),
-       url('../fonts/open-sans-v34-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/open-sans-v34-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/*----------------------------------------------------------------------------------------------------------------------------*/
-
-
 /* definition of colors for color toggling */
 :root {
   --font-color: #969484;
+  --font-color-strong: #969484;
+  --font-color-strong-two: #969422;
   --font-highlight-color: #eeeeee;
   --font-highlight-color-two: #f1ff42;
   --bg-color: #292a2d;
@@ -49,10 +20,11 @@
 * {
   margin: 0;
   padding: 0;
+  font-weight: normal;
 }
 
 body {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   color: var(--font-color);
   background-color: var(--bg-color);
   border-style: none;
@@ -223,7 +195,7 @@ body {
 .crow-right .preview-image {
   display: block;
   width: calc(100% - 10px);
-  height: 600px;
+  height: 400px;
   background-position: center;
   background-size: cover;
 }
@@ -268,6 +240,13 @@ body {
   width: 100%;
   text-align: left;
 }
+body .crow .crow-right strong {
+  color: var(--font-color-strong);
+  font-weight: normal;
+}
+body.theme_two .crow .crow-right strong {
+  color: var(--font-color-strong-two);
+}
 .crow-content .highlight {
   padding: 10px;
 }
@@ -279,10 +258,12 @@ body {
 .crow-content iframe {
   width: 100%;
 }
+.crow-content ol {
+  margin-left: 1.5em;
+}
 .crow-content ul, 
-.crow-content ol,
 .crow-content dl {
-  margin-left: 2em;
+  margin-left: 1em;
 }
 .crow-content a {
   border-bottom: 1px dotted;
