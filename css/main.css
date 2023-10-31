@@ -242,7 +242,7 @@ body {
 }
 body .crow .crow-right strong {
   color: var(--font-color-strong);
-  font-weight: normal;
+  font-weight: bold;
 }
 body.theme_two .crow .crow-right strong {
   color: var(--font-color-strong-two);
@@ -440,4 +440,12 @@ body.theme_two h1 {
 }
 .crow-content * a:hover {
   background-color: #289DAA;
+}
+
+blockquote {
+  background-color: #c0c0c035;
+  border-bottom: 5px solid #c0c0c015;
+  display: block;
+  padding: 20px;
+  margin-right: 10px;
 }
