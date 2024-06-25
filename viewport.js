@@ -1,1 +1,0 @@
-$(document).ready(function () { function setViewPortHeight() { let vh = window.innerHeight * 0.01; document.documentElement.style.setProperty('--vh', `${vh}px`); } $(window).on('resize', _.debounce(function () { setViewPortHeight(); }, 400)); setViewPortHeight();});
